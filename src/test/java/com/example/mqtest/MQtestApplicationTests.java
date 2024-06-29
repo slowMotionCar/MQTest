@@ -22,7 +22,7 @@ class MQtestApplicationTests {
     @Test
     public void testSimpleQueue() {
         // 队列名称
-        String queueName = "simple.queue";
+        String queueName = "hello";
         // 消息
         String message = "hello, spring amqp!";
         // 发送消息

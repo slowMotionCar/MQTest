@@ -38,16 +38,20 @@ public class SpringRabbitListener {
     //workQ监听1
     @RabbitListener(queues = QUEUE_NAME)
     public void listenWorkQueue1(String msg) throws InterruptedException {
-        System.err.println("消费者1........接收到消息：【" + msg + "】" + LocalTime.now());
-        Thread.sleep(200);
+        throw new RuntimeException("Simulated message processing failure");
+//        System.err.println("消费者1........接收到消息：【" + msg + "】" + LocalTime.now());
+//        Thread.sleep(200);
     }
 
+    /*
     //workQ监听2
     @RabbitListener(queues = QUEUE_NAME)
     public void listenWorkQueue2(String msg) throws InterruptedException {
         System.err.println("消费者2........接收到消息：【" + msg + "】" + LocalTime.now());
-        Thread.sleep(200);
+//        Thread.sleep(200);
     }
+
+     */
 
     //sub Q1
     @RabbitListener(queues = SUB_QUEUE1_NAME)
